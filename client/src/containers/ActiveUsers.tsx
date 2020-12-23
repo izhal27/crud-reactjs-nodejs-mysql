@@ -102,15 +102,15 @@ const Users = () => {
       <tr key={user.id}>
         <th scope="row">{i + 1}</th>
         <td>{user.nama}</td>
-        <td>{checkBox(user.id, 'streaming_lagu', user.streaming_lagu)}</td>
-        <td>{checkBox(user.id, 'iklan', user.iklan)}</td>
-        <td>
+        <td className="bg-primary">{checkBox(user.id, 'streaming_lagu', user.streaming_lagu)}</td>
+        <td className="bg-secondary">{checkBox(user.id, 'iklan', user.iklan)}</td>
+        <td className="bg-success">
           {checkBox(user.id, 'streaming_karaoke', user.streaming_karaoke)}
         </td>
-        <td>{checkBox(user.id, 'karaoke', user.karaoke)}</td>
-        <td>{checkBox(user.id, 'share_karaoke', user.share_karaoke)}</td>
-        <td>{checkBox(user.id, 'live_streaming', user.live_streaming)}</td>
-        <td>
+        <td className="bg-danger">{checkBox(user.id, 'karaoke', user.karaoke)}</td>
+        <td className="bg-warning">{checkBox(user.id, 'share_karaoke', user.share_karaoke)}</td>
+        <td className="bg-info">{checkBox(user.id, 'live_streaming', user.live_streaming)}</td>
+        <td className="bg-dark">
           {checkBox(user.id, 'share_live_streaming', user.share_live_streaming)}
         </td>
       </tr>
@@ -127,7 +127,7 @@ const Users = () => {
           Clear Cheked
         </button>
       </div>
-      <table className="table table-sm table-striped">
+      <table className="table table-sm table-hover">
         <thead>
           <tr>
             <th scope="col">No</th>

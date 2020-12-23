@@ -47,6 +47,11 @@ const Form: React.FC<Props> = ({
     setDisable(false);
   };
 
+  const onCancelHandler = () => {
+    setNama('');
+    onCancel();
+  };
+
   return (
     <form onSubmit={onSubmitHandler}>
       <div className="row mb-3">
@@ -81,7 +86,7 @@ const Form: React.FC<Props> = ({
         {!isEditMode ? 'Tambah' : 'Simpan'}
       </button>
       {isEditMode && (
-        <button className="btn btn-danger" onClick={onCancel}>
+        <button className="btn btn-danger" onClick={onCancelHandler}>
           Cancel
         </button>
       )}
